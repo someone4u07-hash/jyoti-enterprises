@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { businessConfig } from "@/config/business";
@@ -16,12 +13,13 @@ const quickLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-export default function Footer() {
-  const [currentYear, setCurrentYear] = useState<number>(2025);
+async function getCurrentYear() {
+  "use cache";
+  return new Date().getFullYear();
+}
 
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, []);
+export default async function Footer() {
+  const currentYear = await getCurrentYear();
 
   return (
     <footer className="bg-navy text-white">
@@ -129,7 +127,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-white/10 pt-8 text-center">
           <p className="text-sm text-gray-400">
-            © {currentYear ?? ""} {businessConfig.name}. All rights reserved.
+            © {currentYear} {businessConfig.name}. All rights reserved.
           </p>
           <p className="mt-1 text-xs text-gray-500">
             {businessConfig.address.city}, {businessConfig.address.district},{" "}
