@@ -3,12 +3,12 @@ export const businessConfig = {
   description:
     "Jyoti Enterprises in Ranebennur offers solar water heaters and rooftop systems, water filters and purifiers, UPS batteries, and fire extinguishers.",
   address: {
-    street: "Sri Ram Nagar",
+    street: "Vikasa Nagar 1st cross, Near Ambhabhavani model school",
     city: "Ranebennur",
     district: "Haveri",
     state: "Karnataka",
     pincode: "581115",
-    full: "Sri Ram Nagar, Ranebennur, Haveri, Karnataka 581115",
+    full: "Vikasa Nagar 1st cross, Near Ambhabhavani model school, Ranebennur, Haveri, Karnataka 581115",
   },
   contact: {
     phone: "+91 86606 21727",
@@ -19,7 +19,7 @@ export const businessConfig = {
   social: {
     whatsapp: "918660621727",
     googleMaps:
-      "https://maps.google.com/?q=Sri+Ram+Nagar,+Ranebennur,+Haveri,+Karnataka",
+      "https://maps.google.com/?q=Vikasa+Nagar+1st+cross,+Near+Ambhabhavani+model+school,+Ranebennur,+Haveri,+Karnataka",
   },
   seo: {
     siteUrl: "https://jyotienterprises.in",
