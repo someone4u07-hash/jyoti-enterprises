@@ -12,6 +12,12 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, index = 0 }: ProductCardProps) {
+  const images = product.images?.length
+    ? product.images
+    : product.image
+      ? [product.image]
+      : [];
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -20,15 +26,22 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
       transition={{ duration: 0.45, delay: index * 0.08 }}
       className="group overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
     >
-      {product.image ? (
-        <div className="relative aspect-[4/3] overflow-hidden bg-section-bg">
-          <Image
-            src={product.image}
-            alt={product.imageAlt ?? product.name}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
+      {images.length > 0 ? (
+        <div
+          className="relative grid aspect-[4/3] gap-2 overflow-hidden bg-section-bg"
+          style={{ gridTemplateColumns: `repeat(${Math.min(images.length, 2)}, minmax(0, 1fr))` }}
+        >
+          {images.map((image, imageIndex) => (
+            <div key={`${product.id}-${imageIndex}`} className="relative min-h-0 min-w-0">
+              <Image
+                src={image}
+                alt={product.imageAlt ?? product.name}
+                fill
+                sizes="(max-width: 640px) 50vw, (max-width: 1280px) 25vw, 16vw"
+                className="object-contain p-4"
+              />
+            </div>
+          ))}
           {product.imageCredit && (
             <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-[11px] font-semibold text-navy shadow-sm backdrop-blur">
               Reference image
