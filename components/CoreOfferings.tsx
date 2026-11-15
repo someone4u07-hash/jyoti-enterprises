@@ -23,7 +23,7 @@ export default function CoreOfferings({ compact = false }: CoreOfferingsProps) {
         return (
           <article
             key={offering.id}
-            className="group rounded-2xl border border-border bg-white/90 p-6 shadow-[0_10px_30px_rgba(18,54,71,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-solar-orange/50 hover:shadow-[0_16px_40px_rgba(242,165,26,0.12)]"
+            className="group rounded-2xl border border-border bg-white p-6 shadow-[0_10px_30px_rgba(18,54,71,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-solar-orange/50 hover:shadow-[0_16px_40px_rgba(242,165,26,0.12)]"
           >
             <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-solar-orange-light text-solar-orange transition-colors group-hover:bg-solar-orange group-hover:text-white">
               <Icon className="h-6 w-6" aria-hidden="true" />
