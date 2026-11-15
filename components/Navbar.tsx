@@ -40,21 +40,21 @@ export default function Navbar() {
       <nav className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="group flex items-center gap-3">
             <Image
               src={businessLogo}
               alt={`${businessConfig.name} logo`}
               width={44}
               height={44}
-              className="h-11 w-11 rounded-full object-contain transition-transform group-hover:scale-105"
+              className="h-11 w-11 rounded-full object-contain shadow-sm transition-transform group-hover:scale-105"
               priority
             />
             <div>
-              <span className="text-lg font-bold text-navy lg:text-xl">
+              <span className="block text-lg font-bold text-navy lg:text-xl">
                 {businessConfig.name}
               </span>
-              <span className="hidden text-xs text-text-secondary sm:block">
-                Solar Water Heater Sales &amp; Service
+              <span className="hidden text-[11px] font-medium uppercase tracking-[0.12em] text-text-secondary sm:block">
+                Solar • Water • Power • Safety
               </span>
             </div>
           </Link>

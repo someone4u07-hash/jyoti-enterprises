@@ -1,3 +1,12 @@
+import type { StaticImageData } from "next/image";
+import fireExtinguisherImage from "../assets/FX.jpg";
+import solar100Image from "../assets/100lpd.webp";
+import solar150Image from "../assets/150lpd.webp";
+import solar200Image from "../assets/200lpd.jpeg";
+import oilPressersImage from "../assets/oil_pressers.jpeg";
+import flourMachineImage from "../assets/flour_machine.jpeg";
+import flourMachineImage2 from "../assets/flour_machine2.jpeg";
+
 export type Product = {
   id: string;
   name: string;
@@ -7,7 +16,8 @@ export type Product = {
   featureSummary: string;
   features: string[];
   badge: string;
-  image?: string;
+  image?: string | StaticImageData;
+  images?: (string | StaticImageData)[];
   imageAlt?: string;
   imageCredit?: {
     author: string;
@@ -28,6 +38,8 @@ export const products: Product[] = [
     featureSummary: "Ideal for 2 to 3 members with efficient thermal insulation.",
     features: ["High-density insulation", "Durable stainless steel tank", "Low maintenance"],
     badge: "Best Seller",
+    image: solar100Image,
+    imageAlt: "100 LPD solar water heater",
   },
   {
     id: "solar-150",
@@ -39,6 +51,8 @@ export const products: Product[] = [
     featureSummary: "Designed for moderate usage with faster heating performance.",
     features: ["Fast recovery", "Corrosion-resistant body", "User-friendly operation"],
     badge: "Popular",
+    image: solar150Image,
+    imageAlt: "150 LPD solar water heater",
   },
   {
     id: "solar-200",
@@ -50,8 +64,8 @@ export const products: Product[] = [
     featureSummary: "Perfect for larger families and extended daily hot-water needs.",
     features: ["Premium insulation", "Weather-resistant coating", "Energy-efficient design"],
     badge: "High Demand",
-    image: "/product-images/sudarshan-saur-rooftop.webp",
-    imageAlt: "Sudarshan Saur solar water heater installed on a rooftop",
+    image: solar200Image,
+    imageAlt: "200 LPD solar water heater",
   },
   {
     id: "solar-300",
@@ -73,33 +87,43 @@ export const products: Product[] = [
     },
   },
   {
-    id: "solar-flat-plate",
-    name: "Flat Plate Collector",
-    capacity: "Custom",
-    category: "System Kit",
+    id: "domestic-flour-machine",
+    name: "Domestic Flour Machine",
+    capacity: "Custom configuration",
+    category: "Domestic Equipment",
     description:
-      "A robust collector for solar thermal systems designed to maximise absorption and performance.",
-    featureSummary: "Optimised for weather resilience and long-term reliability.",
-    features: ["High absorption efficiency", "UV resistant finish", "Easy installation"],
-    badge: "System Kit",
-    image: "/product-images/solar-flat-plate.jpg",
-    imageAlt: "Flat plate solar hot water collectors installed on a rooftop",
-    imageCredit: {
-      author: "Ross Hansen",
-      source: "https://commons.wikimedia.org/wiki/File:Solar_Hot_Water_Panels.JPG",
-      license: "CC BY-SA 4.0",
-      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
-    },
+      "Compact semi-automatic flour milling machines for homes and small family-run production units, available in 1HP, 2HP, and 3HP variants.",
+    featureSummary: "Available in custom capacity and finish options based on your exact requirements.",
+    features: ["Custom output options", "Easy operation", "Suitable for household and small business use"],
+    badge: "Awaiting Details",
+    image: flourMachineImage,
+    images: [flourMachineImage, flourMachineImage2],
+    imageAlt: "Domestic flour machine",
   },
   {
-    id: "solar-evacuated",
-    name: "Evacuated Tube System",
-    capacity: "Custom",
-    category: "Premium",
+    id: "domestic-oil-presser",
+    name: "Domestic Oil Presser",
+    capacity: "Custom configuration",
+    category: "Domestic Equipment",
     description:
-      "A premium solar heating system for better thermal performance in varying climatic conditions.",
-    featureSummary: "Excellent for customers seeking high efficiency and year-round reliability.",
-    features: ["High heat retention", "Excellent cold-weather performance", "Premium quality"],
-    badge: "Premium",
+      "Efficient small-capacity oil extraction machines designed for home-based or local commercial use with practical upkeep.",
+    featureSummary: "Please share the model, capacity, and usage requirement so we can suggest the right configuration.",
+    features: ["Configuration-based sizing", "Low maintenance design", "Ideal for household or local processing"],
+    badge: "Custom Quote",
+    image: oilPressersImage,
+    imageAlt: "Domestic oil presser machine",
+  },
+  {
+    id: "fire-extinguisher",
+    name: "Fire Extinguisher",
+    capacity: "2kg / 4kg / 5kg",
+    category: "Safety",
+    description:
+      "Reliable fire safety equipment for homes, workshops, offices, and small commercial premises requiring emergency protection.",
+    featureSummary: "A practical protection upgrade for residential and workplace safety planning.",
+    features: ["Easy-to-access safety equipment", "Suitable for small commercial and household spaces", "Helps support emergency preparedness"],
+    badge: "Safety Essential",
+    image: fireExtinguisherImage,
+    imageAlt: "Fire extinguisher product for home and business safety",
   },
 ];

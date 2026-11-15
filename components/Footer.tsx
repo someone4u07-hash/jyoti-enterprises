@@ -27,7 +27,7 @@ export default async function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Business Info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="mb-4 flex items-center gap-2">
+            <Link href="/" className="mb-4 flex items-center gap-3">
               <Image
                 src={businessLogo}
                 alt={`${businessConfig.name} logo`}
@@ -38,8 +38,8 @@ export default async function Footer() {
               <span className="text-lg font-bold">{businessConfig.name}</span>
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-gray-300">
-              Solar water heaters and rooftop systems, water filters and
-              purifiers, UPS batteries, and fire extinguishers in Ranebennur.
+              Solar water heaters, domestic flour machines, oil pressers, water
+              purification, UPS batteries, and fire safety solutions in Ranebennur.
             </p>
           </div>
 

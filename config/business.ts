@@ -1,7 +1,7 @@
 export const businessConfig = {
   name: "Jyoti Enterprises",
   description:
-    "Jyoti Enterprises in Ranebennur offers solar water heaters and rooftop systems, water filters and purifiers, UPS batteries, and fire extinguishers.",
+    "Jyoti Enterprises in Ranebennur offers solar water heaters and rooftop systems, domestic flour machines, domestic oil pressers, water filters and purifiers, UPS batteries, and fire extinguishers.",
   address: {
     street: "Vikasa Nagar 1st cross, Near Ambhabhavani model school",
     city: "Ranebennur",
@@ -28,6 +28,8 @@ export const businessConfig = {
       "solar geyser dealer",
       "solar water heating solutions",
       "solar rooftop systems",
+      "domestic flour machine",
+      "domestic oil presser",
       "water filters and purifiers",
       "UPS batteries",
       "fire extinguishers",

@@ -20,6 +20,7 @@ import ProductCard from "@/components/ProductCard";
 import { products } from "@/data/products";
 import { businessConfig } from "@/config/business";
 import { getWhatsAppLink, getPhoneLink } from "@/lib/utils";
+import businessLogo from "../assets/logo.png";
 import installationImage from "../assets/01.webp";
 import systemGalleryImage from "../assets/02.webp";
 import collectorImage from "../assets/03.webp";
@@ -123,9 +124,10 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mx-auto mt-6 max-w-xl text-lg text-gray-300"
             >
-              Solar water heaters and rooftop systems, water purifiers, UPS
-              batteries, and fire extinguishers—all from your local{" "}
-              {businessConfig.name} team in {businessConfig.address.city}.
+              Solar water heaters and rooftop systems, water purifiers,
+              domestic flour machines, domestic oil pressers, UPS batteries,
+              and fire extinguishers—all from your local {businessConfig.name}{" "}
+              team in {businessConfig.address.city}.
             </motion.p>
 
             <motion.div
@@ -207,7 +209,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Our Core Offerings"
-            subtitle="Trusted products for solar energy, clean water, reliable backup power, and fire safety."
+            subtitle="Trusted products for solar energy, clean water, domestic processing equipment, reliable backup power, and fire safety."
           />
           <CoreOfferings />
         </div>
@@ -228,7 +230,8 @@ export default function HomePage() {
               <p className="mt-4 text-lg leading-relaxed text-text-secondary">
                 {businessConfig.name} serves customers in {businessConfig.address.city} and
                 surrounding areas with solar water heaters and rooftop systems,
-                water filters and purifiers, UPS batteries, and fire extinguishers.
+                domestic flour machines, domestic oil pressers, water filters and
+                purifiers, UPS batteries, and fire extinguishers.
               </p>
               <p className="mt-3 text-text-secondary">
                 We are an authorised dealer for Sudarshan Saur and Orange Solar.
@@ -251,7 +254,13 @@ export default function HomePage() {
             >
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-solar-orange-light to-solar-orange/20 p-8">
                 <div className="flex flex-col items-center justify-center py-12 text-center">
-                  <Sun className="h-24 w-24 text-solar-orange/60" />
+                  <Image
+                    src={businessLogo}
+                    alt={`${businessConfig.name} logo`}
+                    width={180}
+                    height={180}
+                    className="h-24 w-24 object-contain"
+                  />
                   <p className="mt-4 text-sm text-text-secondary">
                     Solar, Water &amp; Power Solutions
                   </p>

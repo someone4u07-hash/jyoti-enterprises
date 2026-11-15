@@ -21,6 +21,20 @@ export const coreOfferings = [
       "Battery options to support your backup power requirements. Contact us for product availability.",
   },
   {
+    id: "flour",
+    title: "Domestic Flour Machines",
+    brands: ["Custom domestic models"],
+    description:
+      "Compact flour milling machines for homes, small kitchens, and family-based food businesses requiring dependable daily output.",
+  },
+  {
+    id: "oil",
+    title: "Domestic Oil Pressers",
+    brands: ["Custom domestic models"],
+    description:
+      "Small-capacity oil extraction machines for home and local commercial use with efficient output and practical maintenance.",
+  },
+  {
     id: "safety",
     title: "Fire Extinguishers",
     brands: [],
