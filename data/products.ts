@@ -30,7 +30,7 @@ export type Product = {
 export const products: Product[] = [
   {
     id: "solar-100",
-    name: "Solar 100 LPD Geyser",
+    name: "Solar 100 LPD Heater",
     capacity: "100 LPD",
     category: "Residential",
     description:
@@ -43,7 +43,7 @@ export const products: Product[] = [
   },
   {
     id: "solar-150",
-    name: "Solar 150 LPD Geyser",
+    name: "Solar 150 LPD Heater",
     capacity: "150 LPD",
     category: "Apartment",
     description:
@@ -56,7 +56,7 @@ export const products: Product[] = [
   },
   {
     id: "solar-200",
-    name: "Solar 200 LPD Geyser",
+    name: "Solar 200 LPD Heater",
     capacity: "200 LPD",
     category: "Family Home",
     description:
@@ -80,7 +80,7 @@ export const products: Product[] = [
     image: "/product-images/solar-commercial.jpg",
     imageAlt: "Rooftop solar water heater installation",
     imageCredit: {
-      author: "రవిచంద్ర",
+      author: "-",
       source: "https://commons.wikimedia.org/wiki/File:Solar_water_heater_installed_on_rooftop.jpg",
       license: "CC BY-SA 4.0",
       licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
